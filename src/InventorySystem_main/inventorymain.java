@@ -1,6 +1,6 @@
 package InventorySystem_main;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import InventorySystem_data.CustomerRelation;
@@ -45,9 +45,12 @@ public class inventorymain {
     	List<Customer> cstlist= cs.findallcustnotprint();
     	List<Item> itemlist= its.findallnotprin();
 		Consolereadorder co =new Consolereadorder();
-    	Order od=co.bildorder(cs,its);
+//    	Order od=co.bildorder(cs,its);
     	Orderservice os=new Orderservice(dao2);
-    	os.addorder(od, cstlist,itemlist);
+//    	os.addorder(od, cstlist,itemlist);
+    	 List<Order> or= os.findallorder();
+//    	os.updateorder(or, cs, its);
+//    	os.deleteorder(or, cs, its);
 	}
 
 }
